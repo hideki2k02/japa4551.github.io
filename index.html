@@ -1,0 +1,53 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>japa4551's Blog?</title>
+        <script src="files/coast.min-1.1.js"></script>
+    </head>
+
+    <body>
+        <div>
+            <a href="#">Index</a>
+            <a href="#buy-me-a-coffe">Buy Me A Coffe</a>
+        </div>
+
+        <div class="coast-view" data-route="index">
+            <h1>Welcome to my page!</h1>
+
+            I'm japa4551, and this is supposed to be my page, however i suck at HTML
+            so it may take a while for it to get ready...
+        </div>
+
+        <div class="coast-view" data-route="buy-me-a-coffe">
+            ### Bitcoin (Native SegWit bech32 BTC): bc1qntw8aulfe2e42xgd0sl9pam5krcz62uke3xewy
+
+            ### Bitcoin (Nested SegWit P2SH BTC): 3QZbZQxohMegKrs8QWyBcVbH3SnTJydpA3
+    
+            ### Bitcoin (Legacy BTC): 1GQotnKUEhYDftGK7ShGCSHU7so8ABWcv9
+    
+            ### Litecoin (Native SegWit bech32 LTC): ltc1qunszasyq4zfceklue047a09yucr65mc5cyetmw
+    
+            ### Litecoin (Nested SegWit P2SH LTC): MJVrTpEh9okVjwX5kL6AaVNZhUW96FgAk4
+    
+            ### Litecoin (Legacy LTC): LXv4z5AfDQ2LCKtPzJhZjdMB5tk8Ngjc3n
+    
+            ### DogeCoin (DOGE): DMX4JeVQubchHuv22ykEn57k2xVqJcLkCP
+    
+            ### Etherum (ETH): 0x15c9A138914c82676f163bE2C41691e0d2d4Ca3a
+    
+            ### DASH (DASH): XrRzJDPXiCfJeFKBdZYe6krcsSDqJagsy3
+        </div>
+
+    </body>
+
+    <footer>Copyright japa4551 2021</footer>.
+
+    <script>
+        const routes = {
+            'index': () => {},
+            'buy-me-a-coffe': () => {}
+        }
+
+        Coast.registerRoutes(routes);
+    </script>
+</html>
