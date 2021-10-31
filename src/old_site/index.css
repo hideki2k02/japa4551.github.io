@@ -1,0 +1,68 @@
+header{
+    background-color: rgb(16, 20, 23);
+
+    padding: 10px;
+}
+
+header a{
+    font-size: 32px;
+    font-weight: bold;
+    color:white;
+    text-decoration: none;
+    margin: 15px;
+}
+
+header a:hover{
+    color: red;
+}
+
+header a.active{
+    color: red;
+}
+
+body{
+    text-align: center;
+    background-color: rgb(7, 12, 16);
+    color: white;
+
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+p{
+    font-size: 18px;
+}
+
+footer::first-line{
+    color:red;
+}
+
+.cyan-text{
+    color: cyan;
+}
+
+.warning-message{
+    margin-top: 25px;
+    color:red;
+    font-size: 30px;
+}
+
+.cant-be-selected{
+    user-select: none;
+}
+
+/* Things below here were not implemented */
+.toast {
+    display: none;
+    position: fixed;
+    bottom: 15px;
+    left: calc(50% - 100px);
+    width: 200px;
+    height: 40px;
+    background-color: #fff;
+}
+
+.toast.open {
+    display: flex;
+}
