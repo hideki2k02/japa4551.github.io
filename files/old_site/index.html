@@ -1,0 +1,105 @@
+<html>
+    <head>
+        <title>japa4551's Blog?</title>
+
+        <meta charset="UTF-8">
+        <meta name="description" content="japa4551 test website">
+        
+        <script src="files/coast.min-1.1.js"></script>
+        <link rel="stylesheet" type="text/css" href="files/index.css">
+    </head>
+
+    <body>
+        <header class="navbar">
+            <a href="#">Index</a>
+            <a href="#buy-me-a-coffe">Buy Me A Coffe</a>
+        </header>
+
+        <div class="coast-view" data-route="index">
+            <h1>Welcome to my page!</h1>
+
+            <p>I'm japa4551, and this is my page, however i suck at HTML so it may take a while for it to get ready...</p>
+        </div>
+
+        <div class="coast-view" data-route="buy-me-a-coffe">
+            <h1>
+                Bitcoin (Native SegWit bech32 BTC):
+                <a
+                  href="javascript:void();"
+                  id="address-0"
+                  onclick="copyAddress(0)"
+                >
+                    bc1qntw8aulfe2e42xgd0sl9pam5krcz62uke3xewy
+                </a>
+            </h1>
+            <h1>
+                Bitcoin (Nested SegWit P2SH BTC):
+                <a
+                  href="javascript:void();"
+                  id="address-1"
+                  onclick="copyAddress(1)"
+                >
+                    3QZbZQxohMegKrs8QWyBcVbH3SnTJydpA3
+                </a>
+            </h1>
+            <h1>Bitcoin (Legacy BTC): 1GQotnKUEhYDftGK7ShGCSHU7so8ABWcv9</h1>
+
+            <h1>Litecoin (Native SegWit bech32 LTC): ltc1qunszasyq4zfceklue047a09yucr65mc5cyetmw</h1>
+            <h1>Litecoin (Nested SegWit P2SH LTC): MJVrTpEh9okVjwX5kL6AaVNZhUW96FgAk4</h1>
+            <h1>Litecoin (Legacy LTC): LXv4z5AfDQ2LCKtPzJhZjdMB5tk8Ngjc3n</h1>
+
+            <h1>DogeCoin (DOGE): DMX4JeVQubchHuv22ykEn57k2xVqJcLkCP</h1>
+
+            <h1>DASH (DASH): XrRzJDPXiCfJeFKBdZYe6krcsSDqJagsy3</h1>
+        </div>
+
+        <footer>
+            <p>
+                Single-Page Library by
+                <a class="cyan-text" href="https://github.com/10c8/">10c8</a>
+            </p>
+            <p>Copyright japa4551, 2021</p>
+        </footer>
+
+        <div class="toast"></div>
+    </body>
+
+    <script>
+        const copyAddress = id => {
+            const el = document.getElementById(`address-${id}`);
+            const addr = el.innerText;
+
+            navigator.clipboard.writeText(addr);
+            alert('Copied!');
+        };
+
+        const routes = {
+            'index': () => {},
+            'buy-me-a-coffe': () => {}
+        }
+
+        Coast.registerRoutes(routes)
+        Coast.onRouteChanged = function() {
+            let current_route = Coast.getCurrentRoute()
+            let links = Array.from(document.getElementsByTagName("a"))
+
+            links.forEach(link => {
+                let route = link.getAttribute("href")
+
+                if(route === `#${current_route}`)
+                {
+                    link.classList.add("active")
+                }
+
+                else
+                {
+                    link.classList.remove("active")
+                }
+
+                //console.log("Route:", route)
+                //console.log("Current Route:", current_route)
+                //console.log("Active", route === `#${current_route}`)
+            })
+        }
+    </script>
+</html>

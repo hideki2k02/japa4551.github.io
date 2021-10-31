@@ -1,54 +1,13 @@
-<html>
-    <head>
-        <title>japa4551's Blog?</title>
-
-        <meta charset="UTF-8">
-        <meta name="description" content="japa4551 test website">
-        
-        <script src="files/coast.min-1.1.js"></script>
-        <link rel="stylesheet" type="text/css" href="files/index.css">
-    </head>
-
-    <body>
-        <header class="navbar">
-            <a href="#">Index</a>
-            <a href="#buy-me-a-coffe">Buy Me A Coffe</a>
-        </header>
-
-        <div class="coast-view" data-route="index">
-            <h1>Welcome to my page!</h1>
-
-            <p>I'm japa4551, and this is my page, however i suck at HTML so it may take a while for it to get ready...</p>
-        </div>
-
-        <div class="coast-view" data-route="buy-me-a-coffe">
-            <h1>Bitcoin (Native SegWit bech32 BTC): bc1qntw8aulfe2e42xgd0sl9pam5krcz62uke3xewy</h1>
-            <h1>Bitcoin (Nested SegWit P2SH BTC): 3QZbZQxohMegKrs8QWyBcVbH3SnTJydpA3</h1>
-            <h1>Bitcoin (Legacy BTC): 1GQotnKUEhYDftGK7ShGCSHU7so8ABWcv9</h1>
-
-            <h1>Litecoin (Native SegWit bech32 LTC): ltc1qunszasyq4zfceklue047a09yucr65mc5cyetmw</h1>
-            <h1>Litecoin (Nested SegWit P2SH LTC): MJVrTpEh9okVjwX5kL6AaVNZhUW96FgAk4</h1>
-            <h1>Litecoin (Legacy LTC): LXv4z5AfDQ2LCKtPzJhZjdMB5tk8Ngjc3n</h1>
-
-            <h1>DogeCoin (DOGE): DMX4JeVQubchHuv22ykEn57k2xVqJcLkCP</h1>
-
-            <h1>Etherum (ETH): 0x15c9A138914c82676f163bE2C41691e0d2d4Ca3a</h1>
-
-            <h1>DASH (DASH): XrRzJDPXiCfJeFKBdZYe6krcsSDqJagsy3</h1>
-        </div>
-
-        <footer>
-            <p>Single-Page Library by 10c8</p>
-            <p>Copyright japa4551, 2021</p>
-        </footer>
-    </body>
-
-    <script>
-        const routes = {
-            'index': () => {},
-            'buy-me-a-coffe': () => {}
-        }
-
-        Coast.registerRoutes(routes);
-    </script>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/src/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>japa4551's Blog?</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
 </html>
